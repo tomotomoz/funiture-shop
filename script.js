@@ -12,7 +12,7 @@ let mask = document.querySelector('#mask');
 //   nav.classList.toggle('open');
 //  };
 
-// toggleの部分が同じ処理を行っているので、以下のように簡潔に書くこともできますね…！
+
 const toggleNav = () => {
   nav.classList.toggle('open');
 };

@@ -1,46 +1,48 @@
 @charset "utf-8";
 
-html{
+html {
   font-size: 100%;
 }
 
-body{
+body {
   font-size: 0.875rem;
   color: #333;
   position: relative;
   line-height: 1.5;
 }
 
-.wrapper{
-max-width: 1380px;
-margin: 0 auto;
-padding: 0 20px;
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-img{
+img {
   max-width: 100%;
 }
-a{
+
+a {
   transition: all 0.5s;
 }
-a:hover{
+
+a:hover {
   opacity: 0.7;
 }
 
-.page-ttl{
+.page-ttl {
   margin-bottom: 30px;
   font-weight: normal;
   letter-spacing: 0.2rem;
   font-size: 1.125rem;
 }
 
-.site-title{
- width: 230px;
- line-height: 1;
+.site-title {
+  width: 230px;
+  line-height: 1;
 }
 
 /* header */
-.header{
+.header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -52,7 +54,7 @@ a:hover{
   z-index: 10;
 }
 
-#nav{
+#nav {
   position: fixed;
   top: 5%;
   left: -300px;
@@ -62,22 +64,24 @@ a:hover{
   transition: all 0.5s;
 }
 
-#nav a{
+#nav a {
   color: #faf6f6;
   font-size: 1.25rem;
 }
-#nav li{
+
+#nav li {
   margin-bottom: 14px;
 }
 
-.toggle-btn{
+.toggle-btn {
   width: 30px;
   height: 30px;
   z-index: 10;
   position: relative;
   cursor: pointer;
 }
-.toggle-btn span{
+
+.toggle-btn span {
   position: absolute;
   display: block;
   width: 30px;
@@ -87,33 +91,42 @@ a:hover{
   transition: all 0.5s;
 }
 
-.toggle-btn span:nth-child(1){
+.toggle-btn span:nth-child(1) {
   top: 10px;
 }
-.toggle-btn span:nth-child(2){
+
+.toggle-btn span:nth-child(2) {
   top: 20px;
 }
- .open #nav{
+
+.open #nav {
   opacity: 1;
   left: 5%;
   transition: all 0.5s;
 }
-.open .toggle-btn span{
+
+.open .toggle-btn span {
   background-color: #fff;
 }
-.open .toggle-btn span:nth-child(1){
+
+.open .toggle-btn span:nth-child(1) {
   transform: translateY(5px) rotate(-45deg);
 }
-.open .toggle-btn span:nth-child(2){
-  transform: translateY(-5px) rotate(45deg);
-} 
 
-#mask{
-  display: none;
-  transition: all 0.5s;
+.open .toggle-btn span:nth-child(2) {
+  transform: translateY(-5px) rotate(45deg);
 }
- .open #mask{
-  display: block;
+
+#mask {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-300px);
+  transition: all 0.8s;
+}
+
+.open #mask {
+  visibility: visible;
+  transform: translateX(0);
   position: fixed;
   top: 0;
   left: 0;
@@ -121,35 +134,38 @@ a:hover{
   height: 100%;
   background-color: #171616;
   opacity: 0.9;
-} 
+}
 
 
 /* main */
 
-#top{
+#top {
   padding-top: 50px;
   padding-bottom: 160px;
 }
 
 /* top */
-.product-list{
+.product-list {
   display: flex;
   max-width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.product-list li{
+
+.product-list li {
   width: 23%;
   margin-bottom: 40px;
 }
-.product-list img{
-margin-bottom: 10px;
-}
-.product-list p{
+
+.product-list img {
   margin-bottom: 10px;
 }
 
-.viewmore{
+.product-list p {
+  margin-bottom: 10px;
+}
+
+.viewmore {
   display: block;
   text-align: center;
   font-size: 1.125rem;
@@ -157,59 +173,67 @@ margin-bottom: 10px;
 
 
 /* footer */
-.footer{
+.footer {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.footer-list{
+
+.footer-list {
   display: flex;
 }
-.footer-list a{
- font-size: 1rem;
+
+.footer-list a {
+  font-size: 1rem;
 }
-.footer-list li{
+
+.footer-list li {
   margin-right: 20px;
 }
-.copyright{
+
+.copyright {
   font-size: 0.75rem;
 }
 
 
 /* product */
-.num-box{
+.num-box {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.num-box li{
+
+.num-box li {
   margin-right: 40px;
   font-size: 1.125rem;
 }
-.num-box li:nth-child(2){
+
+.num-box li:nth-child(2) {
   margin-right: 0;
 }
 
 
 /* about */
-.about-explain{
+.about-explain {
   max-width: 700px;
 }
 
-.about-explain p{
+.about-explain p {
   line-height: 1.9;
   margin-bottom: 30px;
   font-size: 1.125rem;
 }
 
 /* company */
-.company-inner{
+.company-inner {
   max-width: 700px;
 }
-.company-items{
+
+.company-items {
   margin-bottom: 40px;
 }
-.company-text{
+
+.company-text {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -217,22 +241,28 @@ margin-bottom: 10px;
   padding: 23px 10px;
   border-bottom: 1px solid #DCDBDB;
 }
-.company-text:last-child{
+
+.company-text:last-child {
   border-bottom: none;
 }
-.company-text dt{
+
+.company-text dt {
   width: 30%;
 }
-.company-text dd{
+
+.company-text dd {
   width: 70%;
 }
-.add{
+
+.add {
   margin-left: 30%;
 }
-.map{
- filter: grayscale(1);
+
+.map {
+  filter: grayscale(1);
 }
-.map iframe{
+
+.map iframe {
   width: 100%;
   height: 300px;
   border: 0;
@@ -240,80 +270,93 @@ margin-bottom: 10px;
 
 
 /* item-description */
-.description-inner{
+.description-inner {
   display: flex;
   justify-content: space-between;
   max-width: 880px;
   margin-bottom: 60px;
-  font-size: 0.875rem;
 }
-.text{
-width: 42%;
+
+.text {
+  width: 42%;
 }
-.item-img{
+
+.item-img {
   width: 50%;
   margin-bottom: 20px;
 }
-.text p{
+
+.text p {
   margin-bottom: 40px;
   text-align: justify;
 }
-.item-flex{
+
+.item-flex {
   display: flex;
   flex-wrap: wrap;
-  /* width: 100%; */
   margin-bottom: 80px;
 }
-.text dl dt{
+
+.text dl dt {
   width: 30%;
   font-weight: normal;
   font-size: 1rem;
-  
 }
-.text dl dd{
+
+.text dl dd {
   width: 70%;
   font-size: 1rem;
 }
-.text .price{
+
+.text .price {
   margin-bottom: 40px;
 }
-.to-product{
+
+.to-product {
   font-size: 1.125rem;
   margin-left: 40px;
 }
 
 @media (max-width: 900px) {
-  .product-list li{
-   width: 47%;
+  .product-list li {
+    width: 47%;
   }
- .footer{
-  flex-direction: column;
- }
- .description-inner{
-  flex-direction: column;
- }
- .item-img{
-  width: 100%;
 
- }
- .text{
-  width: 60%;
- }
- .company-text{
-  flex-direction: column;
-  flex-wrap: nowrap;
- }
- .company-text dt{
-  width: 100%;
-  padding-bottom: 5px;
- }
- .company-text dd{
-  width: 100%;
- }
- .add{
-  margin-left: 0;
- }
- .footer-list{
-  margin-bottom: 5px;
- }
+  .footer {
+    flex-direction: column;
+  }
+
+  .description-inner {
+    flex-direction: column;
+  }
+
+  .item-img {
+    width: 100%;
+  }
+
+  .text {
+    width: 60%;
+  }
+
+  .company-text {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .company-text dt {
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .company-text dd {
+    width: 100%;
+  }
+
+  .add {
+    margin-left: 0;
+  }
+
+  .footer-list {
+    margin-bottom: 5px;
+  }
 }
